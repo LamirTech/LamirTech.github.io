@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,21 +7,33 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <div class="cubes-background"></div>
     <div class="container">
         <h1>About Us</h1>
         <p>We are LamirTech, an IT company specializing in creating entertainment applications. Our mission is to develop unique digital products that captivate, inspire, and bring joy to users. The LamirTech team combines technical expertise with a passion for creativity, designing apps that stand out in the industry and attract millions of users.</p>
         <p>We are constantly exploring new ideas and innovative solutions to make each of our apps more engaging and accessible. Regardless of the project’s scale, we are committed to high quality, creative solutions, and delivering positive experiences for our users.</p>
         <p>With LamirTech, entertainment reaches a whole new level!</p>
-
+        
         <h2>Contact Us</h2>
         <p>Phone: +7 (707) 943-96-67 (Kazakhstan)<br>
         Email: <a href="mailto:stardeveloper939@gmail.com">stardeveloper939@gmail.com</a></p>
-
+        
         <nav>
-            <a href="about.html">About Us</a> | 
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="../index.html">Select Language</a>
+            <a href="privacy.html">Privacy Policy</a> | <a href="../index.html">Return to main page</a>
         </nav>
     </div>
+
+    <script>
+        const cubesBackground = document.querySelector('.cubes-background');
+        function createCube() {
+            const cube = document.createElement('div');
+            cube.classList.add('cube');
+            cube.style.left = Math.random() * 100 + 'vw';
+            cube.style.animationDuration = Math.random() * 5 + 3 + 's';
+            cubesBackground.appendChild(cube);
+            cube.addEventListener('animationend', () => cube.remove());
+        }
+        setInterval(createCube, 300);
+    </script>
 </body>
 </html>

@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Фон с падающими кубами -->
+    <div class="cubes-background"></div>
+
+    <!-- Основное содержимое -->
     <div class="container">
         <h1>LamirTech</h1>
         <p>Пожалуйста, выберите язык / Please select a language:</p>
@@ -13,5 +17,24 @@
             <a href="ru/about.html">Русский</a> | <a href="en/about.html">English</a>
         </div>
     </div>
+
+    <!-- Скрипт для создания анимации падающих кубов -->
+    <script>
+        const cubesBackground = document.querySelector('.cubes-background');
+
+        function createCube() {
+            const cube = document.createElement('div');
+            cube.classList.add('cube');
+            cube.style.left = Math.random() * 100 + 'vw';
+            cube.style.animationDuration = Math.random() * 5 + 3 + 's';
+            cubesBackground.appendChild(cube);
+
+            // Удаление куба после завершения анимации
+            cube.addEventListener('animationend', () => cube.remove());
+        }
+
+        // Интервал для создания новых кубов
+        setInterval(createCube, 300);
+    </script>
 </body>
 </html>

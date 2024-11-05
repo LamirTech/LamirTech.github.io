@@ -6,21 +6,37 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <!-- Анимационный фон с падающими кубами -->
+    <div class="cubes-background"></div>
+
+    <!-- Основной контейнер для содержимого -->
     <div class="container">
         <h1>О нас</h1>
         <p>Мы – LamirTech, IT-компания, специализирующаяся на разработке приложений для развлечений. Наша миссия – создавать уникальные цифровые продукты, которые увлекают, вдохновляют и приносят радость пользователям. Команда LamirTech объединяет опыт в технологиях и страсть к креативности, разрабатывая приложения, которые выделяются в индустрии и привлекают миллионы пользователей.</p>
         <p>Мы постоянно ищем новые идеи и инновационные решения, чтобы каждое наше приложение становилось еще более увлекательным и доступным. Независимо от масштаба проекта, мы стремимся к высокому качеству, интересным решениям и положительным эмоциям для наших пользователей.</p>
         <p>С LamirTech развлечение выходит на новый уровень!</p>
-
+        
         <h2>Для связи</h2>
         <p>Телефон: +7 (707) 943-96-67 (Казахстан)<br>
         Почта: <a href="mailto:stardeveloper939@gmail.com">stardeveloper939@gmail.com</a></p>
-
+        
         <nav>
-            <a href="about.html">О нас</a> | 
-            <a href="privacy.html">Политика конфиденциальности</a> | 
-            <a href="../index.html">Выбор языка</a>
+            <a href="privacy.html">Политика конфиденциальности</a> | <a href="../index.html">Вернуться на главную</a>
         </nav>
     </div>
+
+    <!-- Скрипт для создания анимации падающих кубов -->
+    <script>
+        const cubesBackground = document.querySelector('.cubes-background');
+        function createCube() {
+            const cube = document.createElement('div');
+            cube.classList.add('cube');
+            cube.style.left = Math.random() * 100 + 'vw';
+            cube.style.animationDuration = Math.random() * 5 + 3 + 's';
+            cubesBackground.appendChild(cube);
+            cube.addEventListener('animationend', () => cube.remove());
+        }
+        setInterval(createCube, 300);
+    </script>
 </body>
 </html>

@@ -63,11 +63,23 @@
 
         <p>Спасибо за использование нашего Сервиса!</p>
         
-        <nav>
-            <a href="about.html">О нас</a> | 
-            <a href="privacy.html">Политика конфиденциальности</a> | 
-            <a href="../index.html">Выбор языка</a>
+     	<nav>
+            <a href="about.html">О нас</a> | <a href="../index.html">Вернуться на главную</a>
         </nav>
     </div>
+
+    <script>
+        const cubesBackground = document.querySelector('.cubes-background');
+        function createCube() {
+            const cube = document.createElement('div');
+            cube.classList.add('cube');
+            cube.style.left = Math.random() * 100 + 'vw';
+            cube.style.animationDuration = Math.random() * 5 + 3 + 's';
+            cubesBackground.appendChild(cube);
+            cube.addEventListener('animationend', () => cube.remove());
+        }
+        setInterval(createCube, 300);
+    </script>
 </body>
 </html>
+
