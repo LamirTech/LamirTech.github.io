@@ -54,3 +54,37 @@ nav a:hover {
 .language-select a:hover {
     color: #ffffff;
 }
+
+/* ---------- Анимационный фон с падающими кубиками ---------- */
+
+/* Фон, в котором "падают" кубики */
+.cubes-background {
+    position: fixed;       /* Чтобы занимать весь экран и не скроллиться */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;      /* Скрываем кубики, когда они выходят за границу */
+    z-index: -1;           /* Помещаем за основным контентом */
+    background: transparent;
+}
+
+/* Стиль для каждого "кубика" */
+.cube {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff; /* Цвет можно изменить при желании */
+    opacity: 0.8;
+    animation: fall linear 5s forwards;
+}
+
+/* Ключевые кадры анимации падения */
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(120vh) rotate(720deg);
+    }
+}

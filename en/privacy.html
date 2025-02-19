@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <div class="cubes-background"></div>
     <div class="container">
         <h1>Privacy Policy</h1>
         <p><strong>Effective Date:</strong> November 5, 2024</p>
-        <p>LamirTech (“we”) developed all of our apps (the “Service”) as free applications. This Privacy Policy (“Policy”) describes how we and our affiliated entities collect, use, and disclose personal information when you use our Service.</p>
+        <p>LamirTech (the development department of Vetprog LLC) (“we”) developed all of our apps (the “Service”) as free applications. This Privacy Policy (“Policy”) describes how Vetprog LLC and our affiliated entities collect, use, and disclose personal information when you use our Service.</p>
         <p>By using our Service and/or accepting this Policy, you or your legal representative (“User”) agree to the terms of this Policy.</p>
 
         <h2>1. Information Collection and Use</h2>
@@ -24,6 +25,7 @@
             <li>Google Play Services</li>
             <li>Appodeal</li>
             <li>AdMob</li>
+            <li>Yandex ADS</li>
         </ul>
         <p>Please refer to the privacy policies of these third-party service providers to understand how they handle your personal information.</p>
 
@@ -46,7 +48,7 @@
         <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If we discover that a child under 13 has provided us with personal information, we will immediately delete this from our servers.</p>
 
         <h2>8. User Rights</h2>
-        <p>Depending on your jurisdiction, you may have specific rights related to your personal data, including access, correction, deletion, restriction of processing, and data portability. For inquiries regarding these rights, contact us at <a href="mailto:lamirtech@yandex.kz">lamirtech@yandex.kz</a>.</p>
+        <p>Depending on your jurisdiction, you may have specific rights related to your personal data, including access, correction, deletion, restriction of processing, and data portability. For inquiries regarding these rights, contact us at <a href="mailto:lamirtech@yandex.kz">lamirtech@yandex.kz</a> or <a href="mailto:help@lamirtech.su">help@lamirtech.su</a>.</p>
 
         <h2>9. Data Retention</h2>
         <p>We retain your data for as long as necessary to fulfill the purposes outlined in this Policy, and generally no longer than two years after you cease using the Service, unless a longer retention period is required or permitted by law.</p>
@@ -59,7 +61,7 @@
 
         <h2>12. Contact Us</h2>
         <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:</p>
-        <p>Email: <a href="mailto:lamirtech@yandex.kz">lamirtech@yandex.kz</a></p>
+        <p>Email: <a href="mailto:lamirtech@yandex.kz">lamirtech@yandex.kz</a> or <a href="mailto:help@lamirtech.su">help@lamirtech.su</a></p>
 
         <p>Thank you for using our Service!</p>
         
@@ -68,17 +70,5 @@
             <a href="../index.html">Return to main page</a>
         </nav>
     </div>
-	<script>
-        const cubesBackground = document.querySelector('.cubes-background');
-        function createCube() {
-            const cube = document.createElement('div');
-            cube.classList.add('cube');
-            cube.style.left = Math.random() * 100 + 'vw';
-            cube.style.animationDuration = Math.random() * 5 + 3 + 's';
-            cubesBackground.appendChild(cube);
-            cube.addEventListener('animationend', () => cube.remove());
-        }
-        setInterval(createCube, 300);
-    </script>
 </body>
 </html>
